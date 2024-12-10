@@ -1,14 +1,19 @@
 {
-    "version":2,
-    "builds":[
-        {
-            "src":"app.js", "use":"@vercel/node"
-        }
-    ],
-    "routes":[
-        {"src":"/(.*)", "dest":"/app.js"}
-    ],
-    "env":{
-        "NODE_ENV":"production"
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)", 
+      "dest": "app.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGODB_URL": "tu_uri_de_base_de_datos"
+  }
 }
