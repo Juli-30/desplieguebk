@@ -12,3 +12,5 @@ app.listen(3005, ()=> {
 })
 
 dbconnect();
+
+module.exports = app;
